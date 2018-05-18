@@ -260,7 +260,7 @@ function showNews (source,id){
                     "color": "#00ff2a",
                     "intro": "",
                       "author": {
-                        "name": "Reporter : "+ response.articles[i].author,
+                        "name": " ",
                         "uri": "",
                         "iconUri": ""
                       },
