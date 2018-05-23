@@ -1,3 +1,4 @@
+var http = require("http");
 const dotenv = require('dotenv')
 require('dotenv').config();
 const NewsAPI = require('newsapi');
@@ -138,6 +139,10 @@ app.post('/callback', function (req, res) {
         }
         newsSource=data.body.text;
         showNews(newsSource,data.body.groupId);
+        
+setInterval(function() {
+    http.get("https://glip-news-bot.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
 
 
         //////
