@@ -8,6 +8,7 @@ var currentdate = new Date();
 var erBase = require("eventregistry");
 var er = new erBase.EventRegistry({apiKey: "49a568f0-fccd-42b5-8b64-ffb3c0820c10"});
 var newsSource;
+var newsList = "";
 
 
 var express = require('express');
@@ -290,6 +291,7 @@ function showNews (source,id){
               })
 
              console.log(latest_news);
+             newsList = " ";
 
           });
         console.log(typeof(news));
