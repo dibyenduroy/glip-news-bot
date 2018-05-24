@@ -252,12 +252,12 @@ function showNews (source,id){
              
              for (i=0;i<response.articles.length;i++) {
                 newsList = newsList+"• " + response.articles[i].title + "\n" + " "+ response.articles[i].url;
-     
+                console.log(response.articles[i].url);
              }
                          //latest_news.news_fields.title=response.articles[i].title;
                 // latest_news.news_fields.value=response.articles[i].url;
                 // latest_news.news_fields.style="Short";
-                console.log(response.articles[i].url);
+               
                              ///////////End Building Card////
             platform.post('/glip/posts', {
                 groupId: id,
