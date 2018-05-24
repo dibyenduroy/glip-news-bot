@@ -261,7 +261,7 @@ function showNews (source,id){
                              ///////////End Building Card////
             platform.post('/glip/posts', {
                 groupId: id,
-                text: response.articles[i].title,
+                text: "News Headlines",
                 attachments:[{
                     "type": "Card",
                     "fallback": "Attachment fallback text",
