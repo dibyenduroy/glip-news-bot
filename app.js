@@ -251,7 +251,7 @@ function showNews (source,id){
              
              
              for (i=0;i<response.articles.length;i++) {
-                newsList = newsList+"• " + response.articles[i].title + "\n" + " "+ response.articles[i].url;
+                newsList = newsList+"• " + response.articles[i].title + " : "+ " "+ response.articles[i].url+ +"  "+"\n";
                 console.log(response.articles[i].url);
              }
                          //latest_news.news_fields.title=response.articles[i].title;
