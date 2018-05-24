@@ -8,7 +8,6 @@ var currentdate = new Date();
 var erBase = require("eventregistry");
 var er = new erBase.EventRegistry({apiKey: "49a568f0-fccd-42b5-8b64-ffb3c0820c10"});
 var newsSource;
-var newsList="";
 
 
 var express = require('express');
@@ -251,48 +250,44 @@ function showNews (source,id){
              
              
              for (i=0;i<response.articles.length;i++) {
-
-                 //latest_news.news_fields.title=response.articles[i].title;
+                newsList = newsList+"• " + response.articles[i].title + "\n" + " "+ response.articles[i].url;
+     
+             }
+                         //latest_news.news_fields.title=response.articles[i].title;
                 // latest_news.news_fields.value=response.articles[i].url;
                 // latest_news.news_fields.style="Short";
-
-                newsList = newsList+"• " + response.articles[i].title + "\n" + " "+ response.articles[i].url;
-
-             }
-
-             console.log(response.articles[i].url);
-             ///////////End Building Card////
-        platform.post('/glip/posts', {
-        groupId: id,
-        text: response.articles[i].title,
-        attachments:[{
-        "type": "Card",
-        "fallback": "Attachment fallback text",
-        "color": "#00ff2a",
-        "intro": "",
-         "author": {
-         "name": " ",
-            "uri": "",
-            "iconUri": ""
-        },
-        "title": "",
-        "text": "",
-     "imageUri": "",
-     "thumbnailUri": "",
-        "fields": [
-         {
-            "title": "Top Headlines",
-            "value": newsList,
-          "style": "Short"
-        }],
-     "footnote": {
-          "text": "News brought to you by News API",
-        "iconUri": "",
-         "time": ""
-    }
-  }]
-})
-newsList = " ";
+                console.log(response.articles[i].url);
+                             ///////////End Building Card////
+            platform.post('/glip/posts', {
+                groupId: id,
+                text: response.articles[i].title,
+                attachments:[{
+                    "type": "Card",
+                    "fallback": "Attachment fallback text",
+                    "color": "#00ff2a",
+                    "intro": "",
+                      "author": {
+                        "name": " ",
+                        "uri": "",
+                        "iconUri": ""
+                      },
+                    "title": "",
+                    "text": "",
+                    "imageUri": "",
+                    "thumbnailUri": "",
+                    "fields": [
+                      {
+                        "title": "Top Headlines",
+                        "value": newsList,
+                        "style": "Short"
+                      }],
+                    "footnote": {
+                      "text": "News brought to you by News API",
+                      "iconUri": "",
+                      "time": ""
+                    }
+                  }]
+              })
 
              console.log(latest_news);
 
@@ -335,7 +330,6 @@ function sendMail() {
 
 
 //////// Sending Email
-
 
 
 
