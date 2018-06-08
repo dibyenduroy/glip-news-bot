@@ -141,9 +141,7 @@ app.post('/callback', function (req, res) {
         newsSource=data.body.text;
         showNews(newsSource,data.body.groupId);
         
-setInterval(function() {
-    https.get("https://glip-news-bot.herokuapp.com/");
-}, 300000); // every 5 minutes (300000)
+
 
 
         //////
@@ -311,6 +309,10 @@ function showNews (source,id){
       }
       
 }
+
+setInterval(function() {
+    https.get("https://glip-news-bot.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
 
 /// Sending Email
 function sendMail() {
