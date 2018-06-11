@@ -1,7 +1,4 @@
-```
-<a href="https://www.ringcentral.com/apps/53N5jaZ0Q0a9Nv93-HrvLQ~koroH7y5RHKmnYuf98vsJQ/install?landing_url=https%3A%2F%2Fgithub.com%2Fdibyenduroy%2Fglip-news-bot%2Fblob%2Fmaster%2FREADME.md" target="_blank" style="box-sizing:border-box;display: inline-block;border: 1px solid #0073ae;border-radius: 4px;text-decoration: none;height: 60px;line-height: 60px;width: 160px;padding-left: 20px;font-size: 14px;color:#0073ae;font-family:"Lato",Helvetica,Arial,sans-serif"><span>Add to </span><img style="width: 68px;vertical-align: middle;display: inline-block;margin-left: 10px;" src="https://netstorage.ringcentral.com/dpw/common/glip/logo_glip.png"></a>
 
-```
 
 
 # Developing-locally-with-Glip
