@@ -128,7 +128,7 @@ app.post('/callback', function (req, res) {
                       {
                         "title": "News bot commands",
                         "value": " For news from various sources type the source-type \n examples:\n abc-news\,\n financial-times,\n fortune,\n hacker-news,\n info-money,\n msnbc,\n techcrunch",
-                        "style": "Short"
+                        "style": "Long"
                       }],
                     "footnote": {
                       "text": "News brought to you by News API",
@@ -278,7 +278,7 @@ function showNews (source,id){
                       {
                         "title": "Top Headlines",
                         "value": newsList,
-                        "style": "Short"
+                        "style": "Long"
                       }],
                     "footnote": {
                       "text": "News brought to you by News API",
