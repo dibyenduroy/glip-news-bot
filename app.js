@@ -75,6 +75,7 @@ app.get('/oauth', function (req, res) {
         }).then(function(authResponse){
             var obj = authResponse.json();
             bot_token = obj.access_token;
+            console.log(obj);
             console.log(bot_token);
             res.send(obj)
             subscribeToGlipEvents();
