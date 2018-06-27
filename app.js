@@ -279,7 +279,7 @@ function showNews (source,id){
                       {
                         "title": "Top Headlines",
                         "value": newsList,
-                        "style": "Short"
+                        "style": "Long"
                       }],
                     "footnote": {
                       "text": "News brought to you by News API",
