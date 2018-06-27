@@ -271,16 +271,16 @@ function showNews (source,id){
                         "uri": "",
                         "iconUri": ""
                       },
-                    "title": "",
-                    "text": "",
+                    "title": "Top Headlines",
+                    "text": newsList,
                     "imageUri": "",
                     "thumbnailUri": "",
-                    "fields": [
+                    /*"fields": [
                       {
                         "title": "Top Headlines",
                         "value": newsList,
                         "style": "Long"
-                      }],
+                      }],*/
                     "footnote": {
                       "text": "News brought to you by News API",
                       "iconUri": "",
