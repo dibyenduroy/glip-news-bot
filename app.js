@@ -265,12 +265,12 @@ function showNews (source,id){
                     "type": "Card",
                     "fallback": "Attachment fallback text",
                     "color": "#00ff2a",
-                    "intro": "",
+                    /*"intro": "",
                       "author": {
                         "name": " ",
                         "uri": "",
                         "iconUri": ""
-                      },
+                      },*/
                     "title": "Top Headlines",
                     "text": newsList,
                     "imageUri": "",
