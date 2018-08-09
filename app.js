@@ -69,6 +69,7 @@ app.get('/oauth', function (req, res) {
         res.status(500);
         res.send({"Error": "Looks like we're not getting code."});
         console.log("Looks like we're not getting code.");
+        console.log("The Error Code is :" + req.query.code);
     }else {
         platform.login({
             code : req.query.code,
