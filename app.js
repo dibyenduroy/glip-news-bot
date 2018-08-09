@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 require('dotenv').config();
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('92eebfb88d814cf99943ec3da40a721f');
+///const newsapi = new NewsAPI('92eebfb88d814cf99943ec3da40a721f');
 var currentdate = new Date();
 ////// Event registry
 var erBase = require("eventregistry");
