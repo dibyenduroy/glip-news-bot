@@ -65,12 +65,23 @@ platform = rcsdk.platform();
 
 //Authorization callback method.
 app.post('/oauth', function (req, res) {
-    if(!req.query.code){
+   /* if(!req.query.code){
         res.status(500);
         res.send({"Error": "Looks like we're not getting code."});
         console.log("Looks like we're not getting code.");
-        console.log("The Error Code is :" + req.query.code);
-    }else {
+        console.log("The Error Code is :" + req.query.code);*/
+    
+    var validationToken = req.get('Validation-Token');
+    console.log('The Validation token is : ' +validationToken );
+
+    if(validationToken) {
+        console.log('Responding to RingCentral as last leg to create new Webhook');
+        res.setHeader('Validation-Token', validationToken);
+        res.status(200).json({
+            message: 'Set Header Validation'
+        });
+        
+    } else {
         platform.login({
             code : req.query.code,
             redirectUri : REDIRECT_HOST + '/oauth'
