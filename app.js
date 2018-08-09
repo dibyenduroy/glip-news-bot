@@ -69,7 +69,7 @@ app.post('/oauth', function (req, res) {
         res.status(500);
         res.send({"Error": "Looks like we're not getting code."});
         console.log("Looks like we're not getting code.");
-        console.log("The Error Code is :" + req.query.code);*/
+        console.log("The Error Code is :" + req.query.code);
     
 //     var validationToken = req.get('Validation-Token');
 //     console.log('The Validation token is : ' +validationToken );
