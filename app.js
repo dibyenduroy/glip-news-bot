@@ -64,7 +64,7 @@ rcsdk = new RC({
 platform = rcsdk.platform();
 
 //Authorization callback method.
-app.post('/oauth', function (req, res) {
+app.get('/oauth', function (req, res) {
     if(!req.query.code){
         res.status(500);
         res.send({"Error": "Looks like we're not getting code."});
