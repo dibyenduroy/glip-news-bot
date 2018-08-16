@@ -63,7 +63,8 @@ rcsdk = new RC({
 
 platform = rcsdk.platform();
 
-//Authorization callback method.
+//Authorization callback method. In future when Production has post enabled we need to update it. Currently only Sandbox works 
+//with post
 app.get('/oauth', function (req, res) {
     if(!req.query.code){
         res.status(500);
