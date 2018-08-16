@@ -90,6 +90,7 @@ app.get('/oauth', function (req, res) {
         }).then(function(authResponse){
             var obj = authResponse.json();
             bot_token = obj.access_token;
+            //I get directly get this bot_token from DPW and directly make sure the code enters the platform login
             console.log(obj);
             console.log(bot_token);
             res.send(obj)
