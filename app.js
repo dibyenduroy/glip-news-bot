@@ -94,7 +94,11 @@ app.get('/oauth', function (req, res) {
             console.log(obj);
             console.log(bot_token);
             res.send(obj)
-            subscribeToGlipEvents();
+             console.log("Introducing a Timeout before calling the Subscription");
+            // Introducing a Timeout
+            setTimeout(subscribeToGlipEvents(), 3000); 
+            console.log("AFter the Timeout");
+            
         }).catch(function(e){
             console.error(e)
             res.send("Error: " + e);
