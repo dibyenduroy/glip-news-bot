@@ -96,7 +96,10 @@ app.get('/oauth', function (req, res) {
             res.send(obj)
              console.log("Introducing a Timeout before calling the Subscription");
             // Introducing a Timeout
-            setTimeout(subscribeToGlipEvents(), 3000); 
+            setTimeout(function () {
+            subscribeToGlipEvents();
+            console.log('timeout completed'); 
+            }, 3000);  
             console.log("AFter the Timeout");
             
         }).catch(function(e){
