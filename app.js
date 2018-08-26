@@ -99,7 +99,7 @@ app.get('/oauth', function (req, res) {
             setTimeout(function () {
             subscribeToGlipEvents();
             console.log('timeout completed'); 
-            }, 3000);  
+            }, 4000);  
             console.log("AFter the Timeout");
             
         }).catch(function(e){
