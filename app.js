@@ -111,9 +111,9 @@ app.get('/oauth', function (req, res) {
 
 // Callback method received after subscribing to webhook
 app.post('/callback', function (req, res) {
-    //var validationToken = req.get('Validation-Token');
+    var validationToken = req.get('Validation-Token');
     // hardcoding the validation token
-    var validationToken='bfnBqf88GueQcp6NDWRXitQxqMTY6DvT'
+    //var validationToken='bfnBqf88GueQcp6NDWRXitQxqMTY6DvT'
     console.log('The Validation token is : ' +validationToken );
 
     if(validationToken) {
