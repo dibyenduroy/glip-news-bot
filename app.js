@@ -89,11 +89,11 @@ app.get('/oauth', function (req, res) {
             redirectUri : REDIRECT_HOST + '/oauth'
         }).then(function(authResponse){
             var obj = authResponse.json();
-            //bot_token = obj.access_token;
+            bot_token = obj.access_token;
             
             //Hardcoding BotToken
-             obj.access_token='U0pDMDFQMDlQQVMwMHxBQUNRMzJtdkQybGZ4U1VuR3BfQ3NpcGRBcEE2Nm12d0ZUblBkVkUxdV9fdzJhVE9TTlFOVUdiMlZ5X0dkNU9Jczc5SWZBMHBGZlJ0b3llTDFsQV9wXzNXVHdlYXF4Z3J5TFRHcnhmd2VnR0cxVzdVZDJwUU1fZDJGcWUwY3ZsWG8zd1pTSEdOaURDQWJwcjQ1QlhRNHNIdDZsZVBacXVRV3UtUEtKc3JpM0I4OU83TmZyS1ctak1IOVgxWjFRdDBad3N8bDhJYmdBfHdKbXVfMWRDTkFVa01NWUladDl6Snd8QUE'
-             bot_token='U0pDMDFQMDlQQVMwMHxBQUNRMzJtdkQybGZ4U1VuR3BfQ3NpcGRBcEE2Nm12d0ZUblBkVkUxdV9fdzJhVE9TTlFOVUdiMlZ5X0dkNU9Jczc5SWZBMHBGZlJ0b3llTDFsQV9wXzNXVHdlYXF4Z3J5TFRHcnhmd2VnR0cxVzdVZDJwUU1fZDJGcWUwY3ZsWG8zd1pTSEdOaURDQWJwcjQ1QlhRNHNIdDZsZVBacXVRV3UtUEtKc3JpM0I4OU83TmZyS1ctak1IOVgxWjFRdDBad3N8bDhJYmdBfHdKbXVfMWRDTkFVa01NWUladDl6Snd8QUE'
+             //obj.access_token='U0pDMDFQMDlQQVMwMHxBQUNRMzJtdkQybGZ4U1VuR3BfQ3NpcGRBcEE2Nm12d0ZUblBkVkUxdV9fdzJhVE9TTlFOVUdiMlZ5X0dkNU9Jczc5SWZBMHBGZlJ0b3llTDFsQV9wXzNXVHdlYXF4Z3J5TFRHcnhmd2VnR0cxVzdVZDJwUU1fZDJGcWUwY3ZsWG8zd1pTSEdOaURDQWJwcjQ1QlhRNHNIdDZsZVBacXVRV3UtUEtKc3JpM0I4OU83TmZyS1ctak1IOVgxWjFRdDBad3N8bDhJYmdBfHdKbXVfMWRDTkFVa01NWUladDl6Snd8QUE'
+             //bot_token='U0pDMDFQMDlQQVMwMHxBQUNRMzJtdkQybGZ4U1VuR3BfQ3NpcGRBcEE2Nm12d0ZUblBkVkUxdV9fdzJhVE9TTlFOVUdiMlZ5X0dkNU9Jczc5SWZBMHBGZlJ0b3llTDFsQV9wXzNXVHdlYXF4Z3J5TFRHcnhmd2VnR0cxVzdVZDJwUU1fZDJGcWUwY3ZsWG8zd1pTSEdOaURDQWJwcjQ1QlhRNHNIdDZsZVBacXVRV3UtUEtKc3JpM0I4OU83TmZyS1ctak1IOVgxWjFRdDBad3N8bDhJYmdBfHdKbXVfMWRDTkFVa01NWUladDl6Snd8QUE'
             
             //I get directly get this bot_token from DPW and directly make sure the code enters the platform login
             console.log(obj);
