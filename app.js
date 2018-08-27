@@ -140,8 +140,6 @@ app.post('/callback', function (req, res) {
         //// Post to Glip
 
         if (data.body.text==='Help') {
-            platform.access_token=ACCESS_TOKEN;
-            platform.refresh_token=REFRESH_TOKEN;
             platform.post('/glip/posts', {
                 groupId: data.body.groupId,
                 text: "Help Command",
