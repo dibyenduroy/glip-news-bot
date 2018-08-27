@@ -34,6 +34,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const RINGCENTRAL_ENV= process.env.RINGCENTRAL_ENV;
 const ACCESS_TOKEN= process.env.ACCESS_TOKEN;
+const REFRESH_TOKEN= process.env.REFRESH_TOKEN;
 
 
 
@@ -139,7 +140,8 @@ app.post('/callback', function (req, res) {
         //// Post to Glip
 
         if (data.body.text==='Help') {
-            platform.access_token=ACCESS_TOKEN
+            platform.access_token=ACCESS_TOKEN;
+            platform.refresh_token=REFRESH_TOKEN;
             platform.post('/glip/posts', {
                 groupId: data.body.groupId,
                 text: "Help Command",
